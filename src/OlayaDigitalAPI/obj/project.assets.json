@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "OlayaDigital.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/OlayaDigital.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OlayaDigital.Core.dll": {}
+        }
+      },
+      "OlayaDigital.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "OlayaDigital.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OlayaDigital.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OlayaDigital.Infrastructure.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OlayaDigital.Core/1.0.0": {
+      "type": "project",
+      "path": "../OlayaDigital.Core/OlayaDigital.Core.csproj",
+      "msbuildProject": "../OlayaDigital.Core/OlayaDigital.Core.csproj"
+    },
+    "OlayaDigital.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../OlayaDigital.Infrastructure/OlayaDigital.Infrastructure.csproj",
+      "msbuildProject": "../OlayaDigital.Infrastructure/OlayaDigital.Infrastructure.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "OlayaDigital.Core >= 1.0.0",
+      "OlayaDigital.Infrastructure >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\CEO Personal\\.nuget\\packages\\": {}
@@ -33,7 +71,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj": {
+              "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj"
+            },
+            "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj": {
+              "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
