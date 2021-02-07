@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\OlayaDigital.Infrastructure",
+    "\\src\\OlayaDigital.Infrastructure\\Repositories"
   ],
+  "SelectedNode": "\\OlayaDigital.sln",
   "PreviewInSolutionExplorer": false
 }
