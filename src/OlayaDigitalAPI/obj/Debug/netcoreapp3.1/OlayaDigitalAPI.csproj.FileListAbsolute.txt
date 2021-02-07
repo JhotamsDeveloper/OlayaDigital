@@ -1,0 +1,9 @@
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\OlayaDigital.Core.dll
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\OlayaDigital.Infrastructure.dll
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.csprojAssemblyReference.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\staticwebassets\OlayaDigitalAPI.StaticWebAssets.Manifest.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\staticwebassets\OlayaDigitalAPI.StaticWebAssets.xml
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.AssemblyInfoInputs.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.AssemblyInfo.cs
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.RazorTargetAssemblyInfo.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.MvcApplicationPartsAssemblyInfo.cache
