@@ -1,0 +1,8 @@
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\bin\Debug\netstandard2.0\OlayaDigital.Core.deps.json
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\bin\Debug\netstandard2.0\OlayaDigital.Core.dll
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\bin\Debug\netstandard2.0\OlayaDigital.Core.pdb
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.AssemblyInfoInputs.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.AssemblyInfo.cs
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.dll
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.pdb
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.csprojAssemblyReference.cache
