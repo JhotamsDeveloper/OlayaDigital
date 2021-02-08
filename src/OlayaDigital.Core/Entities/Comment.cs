@@ -7,14 +7,14 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class Comentario
+    public partial class Comment
     {
         public int Id { get; set; }
-        public string Descripcion { get; set; }
-        public int? IdPublicacion { get; set; }
-        public int? IdUsuario { get; set; }
+        public string Description { get; set; }
+        public int? IdPost { get; set; }
+        public int? IdUser { get; set; }
 
-        public virtual Publicacion IdPublicacionNavigation { get; set; }
-        public virtual Usuario IdUsuarioNavigation { get; set; }
+        public virtual Post Post { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -17,23 +17,23 @@ namespace OlayaDigital.Infrastructure.Repositories
         {
             _db_OlayaDigitalContext = db_OlayaDigitalContext;
         }
-        public async Task<IEnumerable<Publicacion>> GetPosts()
+        public async Task<IEnumerable<Post>> GetPosts()
         {
-            //var _post = Enumerable.Range(1, 10).Select(x => new Post
+            //var _post = Enumerable.Range(1, 10).Select(x => new IdPost
             //{
             //    Id = x,
-            //    Tittle = $"Titulo {x}",
+            //    Tittle = $"Tittle {x}",
             //    Url = $"Url {x}",
-            //    Description = $"Descripcion {x}",
-            //    IdCategoria =  x * 3,
-            //    IdUsuario = x * 5
+            //    Description = $"Description {x}",
+            //    IdCategory =  x * 3,
+            //    IdUser = x * 5
             //});
 
             //Crea una tarea que se completa después de 
             //un número específico de milisegundos.
             //await Task.Delay(10);
 
-            var _post = await _db_OlayaDigitalContext.Publicacion.ToListAsync();
+            var _post = await _db_OlayaDigitalContext.Posts.ToListAsync();
 
             return _post;
         }
