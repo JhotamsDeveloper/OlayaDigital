@@ -7,17 +7,16 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class Categoria
+    public partial class Category : BaseEntity
     {
-        public Categoria()
+        public Category()
         {
-            Publicacion = new HashSet<Publicacion>();
+            Posts = new HashSet<Post>();
         }
 
-        public int Id { get; set; }
-        public string Nombre { get; set; }
+        public string Name { get; set; }
         public string Url { get; set; }
 
-        public virtual ICollection<Publicacion> Publicacion { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
     }
 }

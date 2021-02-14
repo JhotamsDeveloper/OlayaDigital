@@ -7,13 +7,12 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class Auditoria
+    public partial class Audit : BaseEntity
     {
-        public int Id { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public DateTime FechaActualizacion { get; set; }
-        public int? IdPublicacion { get; set; }
+        public DateTime DateCreate { get; set; }
+        public DateTime DateUpdate { get; set; }
+        public int? IdPost { get; set; }
 
-        public virtual Publicacion IdPublicacionNavigation { get; set; }
+        public virtual Post Posts { get; set; }
     }
 }
