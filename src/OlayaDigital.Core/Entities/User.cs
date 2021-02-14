@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class User
+    public partial class User : BaseEntity
     {
         public User()
         {
@@ -15,7 +15,6 @@ namespace OlayaDigital.Core.Entities
             Posts = new HashSet<Post>();
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }

@@ -7,9 +7,8 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class Audit
+    public partial class Audit : BaseEntity
     {
-        public int Id { get; set; }
         public DateTime DateCreate { get; set; }
         public DateTime DateUpdate { get; set; }
         public int? IdPost { get; set; }

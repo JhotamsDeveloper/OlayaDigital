@@ -7,14 +7,13 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class Category
+    public partial class Category : BaseEntity
     {
         public Category()
         {
             Posts = new HashSet<Post>();
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
 

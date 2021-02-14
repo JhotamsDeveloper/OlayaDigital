@@ -6,6 +6,5 @@ namespace OlayaDigital.Core.Intarfaces
 {
     public interface IPostRepository
     {
-        Task<IEnumerable<Post>> GetPosts();
     }
 }

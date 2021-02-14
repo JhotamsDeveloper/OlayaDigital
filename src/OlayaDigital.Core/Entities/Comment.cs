@@ -7,9 +7,8 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class Comment
+    public partial class Comment : BaseEntity
     {
-        public int Id { get; set; }
         public string Description { get; set; }
         public int? IdPost { get; set; }
         public int? IdUser { get; set; }

@@ -7,9 +7,8 @@ using System.Collections.Generic;
 
 namespace OlayaDigital.Core.Entities
 {
-    public partial class Media
+    public partial class Media : BaseEntity
     {
-        public int Id { get; set; }
         public string FileName { get; set; }
         public int? IdPost { get; set; }
 
