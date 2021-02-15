@@ -51,27 +51,45 @@ namespace OlayaDigitalAPI.Controllers
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
             return Ok(_postMapper);
         }
+
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetPost(int id) {
+        public async Task<IActionResult> GetPost(int id)
+        {
+            var post = await _postService.GetById(id);
+            var postDto = _mapper.Map<PostDto>(post);
+            return Ok(postDto);
+        }
 
-            var _post = await _postService.GetById(id);
+        [HttpPost]
+        public async Task<IActionResult> Post(PostDto postDto)
+        {
+            var post = _mapper.Map<Post>(postDto);
 
-            #region "De Interés"
-            //Mapeo Manuel
-            //var _postDto = _post.Select(x => new PostDto
-            //{
-            //    Tittle = x.Tittle,
-            //    Description = x.Description,
-            //    Url = x.Url,
-            //    IdCategory = x.IdCategory,
-            //    IdUser = x.IdUser
-            //});
-            #endregion
+            await _postService.InsertPost(post);
 
-            //Mapeo con AutoMapper
-            var _postMapper = _mapper.Map<PostDto>(_post);
-            return Ok(_postMapper);
+            postDto = _mapper.Map<PostDto>(post);
 
+            return Ok(postDto);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, PostDto postDto)
+        {
+            var post = _mapper.Map<Post>(postDto);
+            post.Id = id;
+
+            var result = await _postService.UpdatePost(post);
+
+            return Ok(result);
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _postService.DeletePost(id);
+
+            return Ok(result);
         }
 
     }

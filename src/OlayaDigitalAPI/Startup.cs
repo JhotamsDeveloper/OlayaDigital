@@ -46,6 +46,7 @@ namespace OlayaDigitalAPI
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IPostService, PostService>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             //services.AddTransient<IPostRepository, PostRepository>();
         }
 

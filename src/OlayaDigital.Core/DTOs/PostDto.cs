@@ -6,6 +6,7 @@ namespace OlayaDigital.Core.DTOs
 {
     public class PostDto
     {
+        public int Id { get; set; }
         public string Tittle { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }

@@ -9,14 +9,12 @@ namespace OlayaDigital.Core.Service
 {
     public class PostService : IPostService
     {
-        private readonly IRepository<Post> _postRepository;
-        private readonly IRepository<User> _userRepository;
 
-        public PostService(IRepository<Post> postRepository,
-            IRepository<User> userRepository)
+        private readonly IUnitOfWork _unitOfWork;
+
+        public PostService(IUnitOfWork unitOfWork)
         {
-            _postRepository = postRepository;
-            _userRepository = userRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<Post>> GetPosts()
@@ -37,34 +35,34 @@ namespace OlayaDigital.Core.Service
             //await Task.Delay(10);
             #endregion
 
-            var _post = await _postRepository.GetAll();
+            var _post = await _unitOfWork.PostRepository.GetAll();
             return _post;
         }
 
         public async Task<Post> GetById(int id)
         {
-            return await _postRepository.GetById(id);
+            return await _unitOfWork.PostRepository.GetById(id);
         }
 
         public async Task InsertPost(Post post)
         {
-            var _user = _userRepository.GetById(Convert.ToInt16(post.IdUser));
+            var _user = _unitOfWork.PostRepository.GetById(Convert.ToInt16(post.IdUser));
 
             if (_user == null)
             {
                 throw new Exception("User doesn't exist");
             }
-            await _postRepository.Add(post);
+            await _unitOfWork.PostRepository.Add(post);
         }
         public async Task<bool> UpdatePost(Post post)
         {
-            await _postRepository.Update(post);
+            await _unitOfWork.PostRepository.Update(post);
             return true;
         }
 
         public async Task<bool> DeletePost(int id)
         {
-            await _postRepository.Delete(id);
+            await _unitOfWork.PostRepository.Delete(id);
             return true;
         }
     }
