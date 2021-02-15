@@ -4,6 +4,7 @@ using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,9 +21,9 @@ namespace OlayaDigital.Infrastructure.Repositories
             _entities = _contex.Set<T>();
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public IEnumerable<T> GetAll()
         {
-            return await _entities.ToListAsync();
+            return _entities.AsEnumerable();
         }
 
         public async Task<T> GetById(int id)
@@ -32,14 +33,12 @@ namespace OlayaDigital.Infrastructure.Repositories
 
         public async Task Add(T entity)
         {
-            _entities.Add(entity);
-            await _contex.SaveChangesAsync();
+            await _entities.AddAsync(entity);
         }
 
-        public async Task Update(T entity)
+        public void Update(T entity)
         {
             _entities.Update(entity);
-            await _contex.SaveChangesAsync();
         }
 
 
@@ -47,7 +46,6 @@ namespace OlayaDigital.Infrastructure.Repositories
         {
             T entity = await GetById(id);
             _entities.Remove(entity);
-            await _contex.SaveChangesAsync();
         }
 
 

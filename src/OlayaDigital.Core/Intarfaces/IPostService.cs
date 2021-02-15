@@ -8,7 +8,7 @@ namespace OlayaDigital.Core.Intarfaces
 {
     public interface IPostService
     {
-        Task<IEnumerable<Post>> GetPosts();
+        IEnumerable<Post> GetPosts();
         Task<Post> GetById(int id);
         Task InsertPost(Post post);
         Task<bool> UpdatePost(Post post);

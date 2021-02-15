@@ -45,7 +45,7 @@ namespace OlayaDigitalAPI.Controllers
                 //});
             #endregion
 
-            var _post = await _postService.GetPosts();
+            var _post = _postService.GetPosts();
 
             //Mapeo con AutoMapper
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);

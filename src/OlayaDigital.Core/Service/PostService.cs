@@ -17,7 +17,7 @@ namespace OlayaDigital.Core.Service
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<Post>> GetPosts()
+        public IEnumerable<Post> GetPosts()
         {
             #region "De interés"
             //var _post = Enumerable.Range(1, 10).Select(x => new IdPost
@@ -35,7 +35,7 @@ namespace OlayaDigital.Core.Service
             //await Task.Delay(10);
             #endregion
 
-            var _post = await _unitOfWork.PostRepository.GetAll();
+            var _post = _unitOfWork.PostRepository.GetAll();
             return _post;
         }
 
@@ -56,7 +56,8 @@ namespace OlayaDigital.Core.Service
         }
         public async Task<bool> UpdatePost(Post post)
         {
-            await _unitOfWork.PostRepository.Update(post);
+            _unitOfWork.PostRepository.Update(post);
+            await _unitOfWork.saveChangesAsync();
             return true;
         }
 
