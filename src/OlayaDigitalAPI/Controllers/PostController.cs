@@ -4,6 +4,7 @@ using OlayaDigital.Core.DTOs;
 using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Infrastructure.Repositories;
+using OlayaDigitalAPI.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,25 +32,28 @@ namespace OlayaDigitalAPI.Controllers
         public async Task<IActionResult> GetPosts()
         {
             #region "De Interés"
-                //Forma de traer una clase sin hacer una inyección de dependencia
-                //var _posts = new PostRepository().GetPosts();
+            //Forma de traer una clase sin hacer una inyección de dependencia
+            //var _posts = new PostRepository().GetPosts();
 
-                //Mapeo Manuel
-                //var _postDto = _post.Select(x => new PostDto
-                //{
-                //    Tittle = x.Tittle,
-                //    Description = x.Description,
-                //    Url = x.Url,
-                //    IdCategory = x.IdCategory,
-                //    IdUser = x.IdUser
-                //});
+            //Mapeo Manuel
+            //var _postDto = _post.Select(x => new PostDto
+            //{
+            //    Tittle = x.Tittle,
+            //    Description = x.Description,
+            //    Url = x.Url,
+            //    IdCategory = x.IdCategory,
+            //    IdUser = x.IdUser
+            //});
             #endregion
 
             var _post = _postService.GetPosts();
 
             //Mapeo con AutoMapper
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
-            return Ok(_postMapper);
+
+            //Estructurar el response del api
+            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper);
+            return Ok(_response);
         }
 
         [HttpGet("{id}")]
@@ -57,39 +61,48 @@ namespace OlayaDigitalAPI.Controllers
         {
             var post = await _postService.GetById(id);
             var postDto = _mapper.Map<PostDto>(post);
-            return Ok(postDto);
+
+            //Estructurar el response del api
+            var _response = new ApiResponse<PostDto>(postDto);
+            return Ok(_response);
         }
 
         [HttpPost]
         public async Task<IActionResult> Post(PostDto postDto)
         {
             var post = _mapper.Map<Post>(postDto);
-
             await _postService.InsertPost(post);
-
             postDto = _mapper.Map<PostDto>(post);
 
-            return Ok(postDto);
+            //Estructurar el response del api
+            var _response = new ApiResponse<PostDto>(postDto);
+            return Ok(_response);
         }
 
-        [HttpPut("{id}")]
+
+
+        //Ejemplo para actualizar una entidad https: //localhost:44389/api/post?id=1
+        [HttpPut]
         public async Task<IActionResult> Put(int id, PostDto postDto)
         {
             var post = _mapper.Map<Post>(postDto);
             post.Id = id;
+            var _result = await _postService.UpdatePost(post);
 
-            var result = await _postService.UpdatePost(post);
-
-            return Ok(result);
+            //Estructurar el response del api
+            var _response = new ApiResponse<bool>(_result);
+            return Ok(_response);
         }
 
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var result = await _postService.DeletePost(id);
+            var _result = await _postService.DeletePost(id);
 
-            return Ok(result);
+            //Estructurar el response del api
+            var _response = new ApiResponse<bool>(_result);
+            return Ok(_response);
         }
 
     }

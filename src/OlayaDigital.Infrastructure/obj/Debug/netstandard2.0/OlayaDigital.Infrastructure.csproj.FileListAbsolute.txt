@@ -9,3 +9,4 @@ D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstand
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.csproj.CopyComplete
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.dll
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.pdb
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.csproj.CoreCompileInputs.cache

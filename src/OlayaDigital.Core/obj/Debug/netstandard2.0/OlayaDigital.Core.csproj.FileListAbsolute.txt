@@ -6,3 +6,4 @@ D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\Ola
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.dll
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.pdb
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.csprojAssemblyReference.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Core\obj\Debug\netstandard2.0\OlayaDigital.Core.csproj.CoreCompileInputs.cache

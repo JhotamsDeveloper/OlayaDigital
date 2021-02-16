@@ -4,7 +4,10 @@ using System.Threading.Tasks;
 
 namespace OlayaDigital.Core.Intarfaces
 {
-    public interface IPostRepository
+    /*Se crea esta interfaz para generar otros métodos personalizados, 
+     esta también hereda los métodos CRUD*/
+    public interface IPostRepository : IRepository<Post>
     {
+        Task<IEnumerable<Post>> GetPostByUser(int userId);
     }
 }

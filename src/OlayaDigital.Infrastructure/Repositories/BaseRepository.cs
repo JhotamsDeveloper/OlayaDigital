@@ -13,7 +13,10 @@ namespace OlayaDigital.Infrastructure.Repositories
     public class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly db_OlayaDigitalContext _contex;
-        private readonly DbSet<T> _entities;
+
+        //protected se utiliza para que esta propiedad sea visible por la clase
+        //en este caso BaseRepository<T> y por todas las clases que las hereda.
+        protected readonly DbSet<T> _entities;
 
         public BaseRepository(db_OlayaDigitalContext contex)
         {
@@ -28,7 +31,8 @@ namespace OlayaDigital.Infrastructure.Repositories
 
         public async Task<T> GetById(int id)
         {
-            return await _entities.FindAsync(id);
+            var _model = await _entities.FindAsync(id);
+            return _model;
         }
 
         public async Task Add(T entity)

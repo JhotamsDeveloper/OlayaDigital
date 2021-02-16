@@ -8,7 +8,7 @@ namespace OlayaDigital.Core.Intarfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<Post> PostRepository { get; }
+        IPostRepository PostRepository { get; }
         IRepository<User> UserRepository { get; }
         IRepository<Media> MediaRepository { get; }
         IRepository<Comment> CommentRepository { get; }

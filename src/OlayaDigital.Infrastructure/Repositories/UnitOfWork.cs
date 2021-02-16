@@ -9,8 +9,8 @@ namespace OlayaDigital.Infrastructure.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private readonly db_OlayaDigitalContext _contex;
+        private readonly IPostRepository _postRepository;
         private readonly IRepository<User> _userRepository;
-        private readonly IRepository<Post> _postRepository;
         private readonly IRepository<Media> _mediaRepository;
         private readonly IRepository<Comment> _commentRepository;
         private readonly IRepository<Category> _categoryRepository;
@@ -21,8 +21,8 @@ namespace OlayaDigital.Infrastructure.Repositories
             _contex = contex;
         }
 
-        public IRepository<Post> PostRepository => 
-            _postRepository ?? new BaseRepository<Post>(_contex);
+        public IPostRepository PostRepository => 
+            _postRepository ?? new PostRepository(_contex);
 
         public IRepository<User> UserRepository =>
             _userRepository ?? new BaseRepository<User>(_contex);

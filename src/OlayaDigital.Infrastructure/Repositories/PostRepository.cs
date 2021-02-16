@@ -12,12 +12,15 @@ namespace OlayaDigital.Infrastructure.Repositories
 {
     /*Este repositorio se utiliza para crear métodos no genericos
      solamente de la entidad de POST*/
-    public class PostRepository : IPostRepository
+    public class PostRepository : BaseRepository<Post>, IPostRepository
     {
-        public PostRepository()
+        public PostRepository(db_OlayaDigitalContext _contex) : base(_contex) { }
+
+        public async Task<IEnumerable<Post>> GetPostByUser(int userId)
         {
-
+            //_entity es igual a _contex.post
+            return await _entities.Where(x => 
+            x.IdUser == userId).ToListAsync();
         }
-
     }
 }

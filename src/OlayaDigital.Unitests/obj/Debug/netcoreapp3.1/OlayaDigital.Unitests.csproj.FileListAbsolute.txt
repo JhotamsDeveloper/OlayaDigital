@@ -92,3 +92,5 @@ D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Unitests\obj\Debug\netcoreapp3.1\
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Unitests\obj\Debug\netcoreapp3.1\OlayaDigital.Unitests.csproj.CopyComplete
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Unitests\obj\Debug\netcoreapp3.1\OlayaDigital.Unitests.dll
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Unitests\obj\Debug\netcoreapp3.1\OlayaDigital.Unitests.pdb
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Unitests\obj\Debug\netcoreapp3.1\OlayaDigital.Unitests.csproj.CoreCompileInputs.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Unitests\obj\Debug\netcoreapp3.1\OlayaDigital.Unitests.genruntimeconfig.cache

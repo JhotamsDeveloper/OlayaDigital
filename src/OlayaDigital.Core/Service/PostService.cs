@@ -1,4 +1,5 @@
 ﻿using OlayaDigital.Core.Entities;
+using OlayaDigital.Core.Exceptions;
 using OlayaDigital.Core.Intarfaces;
 using System;
 using System.Collections.Generic;
@@ -41,18 +42,17 @@ namespace OlayaDigital.Core.Service
 
         public async Task<Post> GetById(int id)
         {
+            if (id == 1000)
+            {
+                throw new BusinessException("Esto es un prueba");
+            }
             return await _unitOfWork.PostRepository.GetById(id);
         }
 
         public async Task InsertPost(Post post)
         {
-            var _user = _unitOfWork.PostRepository.GetById(Convert.ToInt16(post.IdUser));
-
-            if (_user == null)
-            {
-                throw new Exception("User doesn't exist");
-            }
             await _unitOfWork.PostRepository.Add(post);
+            await _unitOfWork.saveChangesAsync();
         }
         public async Task<bool> UpdatePost(Post post)
         {
@@ -64,6 +64,7 @@ namespace OlayaDigital.Core.Service
         public async Task<bool> DeletePost(int id)
         {
             await _unitOfWork.PostRepository.Delete(id);
+            await _unitOfWork.saveChangesAsync();
             return true;
         }
     }

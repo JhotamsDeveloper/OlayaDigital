@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Core.Service;
 using OlayaDigital.Infrastructure.Data;
+using OlayaDigital.Infrastructure.Filters;
 using OlayaDigital.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,12 @@ namespace OlayaDigitalAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options =>
+            {   
+                //Se registra las excepciones globales
+                options.Filters.Add<GlobalExceptionFilter>();
+            });
+
             services.AddDbContext<db_OlayaDigitalContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("db_OlayaDigital")));
 
@@ -48,6 +54,12 @@ namespace OlayaDigitalAPI
             services.AddTransient<IPostService, PostService>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             //services.AddTransient<IPostRepository, PostRepository>();
+            
+            //Agragamos todos nuestros filtros de manera global
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<ValidationFilter>();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

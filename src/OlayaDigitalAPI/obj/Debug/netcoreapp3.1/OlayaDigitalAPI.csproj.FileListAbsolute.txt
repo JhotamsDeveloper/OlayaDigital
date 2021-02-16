@@ -8,7 +8,6 @@ D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaD
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.RazorTargetAssemblyInfo.cache
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\appsettings.json
-D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\OlayaDigitalAPI.exe
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\OlayaDigitalAPI.deps.json
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\OlayaDigitalAPI.runtimeconfig.json
@@ -138,3 +137,9 @@ D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\Newton
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.csproj.CoreCompileInputs.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\OlayaDigitalAPI.styles.css
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.genruntimeconfig.cache
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.MvcApplicationPartsAssemblyInfo.cs
