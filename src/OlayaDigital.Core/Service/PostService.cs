@@ -1,7 +1,9 @@
 ﻿using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
+using OlayaDigital.Core.QueryFilters;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +19,7 @@ namespace OlayaDigital.Core.Service
             _unitOfWork = unitOfWork;
         }
 
-        public IEnumerable<Post> GetPosts()
+        public IEnumerable<Post> GetPosts(PostQueryFilter filters)
         {
             #region "De interés"
             //var _post = Enumerable.Range(1, 10).Select(x => new IdPost
@@ -36,6 +38,22 @@ namespace OlayaDigital.Core.Service
             #endregion
 
             var _post = _unitOfWork.PostRepository.GetAll();
+
+            if (filters.IdUser != null)
+            {
+                _post = _post.Where(x => x.IdUser == filters.IdUser);
+            }
+
+            if (filters.Date != null)
+            {
+                //_post = _post.Where(x => x.Date.ToShortDateString() == filters.Date?.ToShortDateString());
+            }
+
+            if (filters.Description != null)
+            {
+                _post = _post.Where(x => x.Description.ToLower().Contains(filters.Description.ToLower()));
+            }
+
             return _post;
         }
 

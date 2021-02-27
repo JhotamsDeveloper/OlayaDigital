@@ -21,7 +21,6 @@ namespace OlayaDigital.Core.Entities
         public string Description { get; set; }
         public int? IdCategory { get; set; }
         public int? IdUser { get; set; }
-
         public virtual Category Category { get; set; }
         public virtual User User { get; set; }
         public virtual ICollection<Audit> Audits { get; set; }

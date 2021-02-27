@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using OlayaDigital.Core.DTOs;
 using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
+using OlayaDigital.Core.QueryFilters;
 using OlayaDigital.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace OlayaDigitalAPI.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetPosts()
+        public async Task<IActionResult> GetPosts([FromQuery]PostQueryFilter filters)
         {
             #region "De Interés"
                 //Forma de traer una clase sin hacer una inyección de dependencia
@@ -45,12 +46,13 @@ namespace OlayaDigitalAPI.Controllers
                 //});
             #endregion
 
-            var _post = _postService.GetPosts();
+            var _post = _postService.GetPosts(filters);
 
             //Mapeo con AutoMapper
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
             return Ok(_postMapper);
         }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPost(int id)
