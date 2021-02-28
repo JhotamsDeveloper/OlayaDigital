@@ -3512,11 +3512,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.IntegrationTests\\OlayaDigital.IntegrationTests.csproj",
+      "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.IntegrationTests\\OlayaDigital.IntegrationTests.csproj",
       "projectName": "OlayaDigital.IntegrationTests",
-      "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.IntegrationTests\\OlayaDigital.IntegrationTests.csproj",
+      "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.IntegrationTests\\OlayaDigital.IntegrationTests.csproj",
       "packagesPath": "C:\\Users\\JHOTAN\\.nuget\\packages\\",
-      "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.IntegrationTests\\obj\\",
+      "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.IntegrationTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

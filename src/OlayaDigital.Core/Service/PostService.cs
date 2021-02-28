@@ -1,4 +1,5 @@
-﻿using OlayaDigital.Core.Entities;
+﻿using OlayaDigital.Core.CustomEntities;
+using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Core.QueryFilters;
 using System;
@@ -19,7 +20,7 @@ namespace OlayaDigital.Core.Service
             _unitOfWork = unitOfWork;
         }
 
-        public IEnumerable<Post> GetPosts(PostQueryFilter filters)
+        public PageList<Post> GetPosts(PostQueryFilter filters)
         {
             #region "De interés"
             //var _post = Enumerable.Range(1, 10).Select(x => new IdPost
@@ -54,7 +55,9 @@ namespace OlayaDigital.Core.Service
                 _post = _post.Where(x => x.Description.ToLower().Contains(filters.Description.ToLower()));
             }
 
-            return _post;
+            var pagedPosts = PageList<Post>.Create(_post, filters.PageNumber, filters.PageSize);
+
+            return pagedPosts;
         }
 
         public async Task<Post> GetById(int id)
@@ -64,13 +67,8 @@ namespace OlayaDigital.Core.Service
 
         public async Task InsertPost(Post post)
         {
-            var _user = _unitOfWork.PostRepository.GetById(Convert.ToInt16(post.IdUser));
-
-            if (_user == null)
-            {
-                throw new Exception("User doesn't exist");
-            }
             await _unitOfWork.PostRepository.Add(post);
+            await _unitOfWork.saveChangesAsync();
         }
         public async Task<bool> UpdatePost(Post post)
         {

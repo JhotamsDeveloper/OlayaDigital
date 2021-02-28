@@ -9,3 +9,14 @@ D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstand
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.csproj.CopyComplete
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.dll
 D:\VISUAL STUDIO\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.pdb
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\bin\Debug\netstandard2.0\OlayaDigital.Infrastructure.deps.json
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\bin\Debug\netstandard2.0\OlayaDigital.Infrastructure.dll
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\bin\Debug\netstandard2.0\OlayaDigital.Infrastructure.pdb
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\bin\Debug\netstandard2.0\OlayaDigital.Core.dll
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\bin\Debug\netstandard2.0\OlayaDigital.Core.pdb
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.csprojAssemblyReference.cache
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.AssemblyInfoInputs.cache
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.AssemblyInfo.cs
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.csproj.CopyComplete
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.dll
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigital.Infrastructure\obj\Debug\netstandard2.0\OlayaDigital.Infrastructure.pdb

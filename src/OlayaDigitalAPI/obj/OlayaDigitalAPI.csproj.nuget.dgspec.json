@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj": {}
+    "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj": {}
   },
   "projects": {
-    "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj": {
+    "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj",
+        "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj",
         "projectName": "OlayaDigital.Core",
-        "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj",
+        "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj",
         "packagesPath": "C:\\Users\\JHOTAN\\.nuget\\packages\\",
-        "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\obj\\",
+        "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -64,14 +64,14 @@
         }
       }
     },
-    "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj": {
+    "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj",
+        "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj",
         "projectName": "OlayaDigital.Infrastructure",
-        "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj",
+        "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\JHOTAN\\.nuget\\packages\\",
-        "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\obj\\",
+        "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -92,8 +92,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj": {
-                "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj"
+              "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj": {
+                "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj"
               }
             }
           }
@@ -142,14 +142,14 @@
         }
       }
     },
-    "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj": {
+    "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj",
+        "projectUniqueName": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj",
         "projectName": "OlayaDigitalAPI",
-        "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj",
+        "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj",
         "packagesPath": "C:\\Users\\JHOTAN\\.nuget\\packages\\",
-        "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigitalAPI\\obj\\",
+        "outputPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigitalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -170,11 +170,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj": {
-                "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj"
+              "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj": {
+                "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Core\\OlayaDigital.Core.csproj"
               },
-              "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj": {
-                "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj"
+              "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj": {
+                "projectPath": "D:\\VISUAL STUDIO\\OlayaDigital\\JhotamsDeveloper\\OlayaDigital\\src\\OlayaDigital.Infrastructure\\OlayaDigital.Infrastructure.csproj"
               }
             }
           }

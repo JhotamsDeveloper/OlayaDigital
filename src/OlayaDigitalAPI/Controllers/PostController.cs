@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using OlayaDigital.Core.CustomEntities;
 using OlayaDigital.Core.DTOs;
 using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Core.QueryFilters;
 using OlayaDigital.Infrastructure.Repositories;
+using OlayaDigitalAPI.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +53,20 @@ namespace OlayaDigitalAPI.Controllers
 
             //Mapeo con AutoMapper
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
-            return Ok(_postMapper);
+            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper);
+
+            var metadata = new MetaData
+            {
+                TotalCount = _post.TotalCount,
+                PageSize = _post.PageSize,
+                CurrentPage = _post.CurrentPage,
+                TotalPages = _post.TotalPages,
+                HasNexPage = _post.HasNextPage,
+                HasPreviousPage = _post.HasPreviousPage,
+            };
+
+            Response.Headers.Add("x-Pagination", JsonConvert.SerializeObject(metadata));
+            return Ok(_response);
         }
 
 
