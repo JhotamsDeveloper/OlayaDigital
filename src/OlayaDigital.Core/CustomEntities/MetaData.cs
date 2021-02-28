@@ -1,5 +1,6 @@
 ﻿namespace OlayaDigital.Core.CustomEntities
 {
+
     public class MetaData
     {
         public int TotalCount { get; set; }

@@ -1,11 +1,9 @@
-﻿using OlayaDigital.Core.CustomEntities;
+﻿using Microsoft.Extensions.Options;
+using OlayaDigital.Core.CustomEntities;
 using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Core.QueryFilters;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OlayaDigital.Core.Service
@@ -14,10 +12,12 @@ namespace OlayaDigital.Core.Service
     {
 
         private readonly IUnitOfWork _unitOfWork;
+        private readonly PaginationOptions _paginationOptions;
 
-        public PostService(IUnitOfWork unitOfWork)
+        public PostService(IUnitOfWork unitOfWork, IOptions<PaginationOptions> options)
         {
             _unitOfWork = unitOfWork;
+            _paginationOptions = options.Value;
         }
 
         public PageList<Post> GetPosts(PostQueryFilter filters)
@@ -37,6 +37,15 @@ namespace OlayaDigital.Core.Service
             //un número específico de milisegundos.
             //await Task.Delay(10);
             #endregion
+
+            //Si pageNumber == 0 Asígnele 1 de lo contratio dejelo de la misma manera 
+            //filters.PageNumber = filters.PageNumber == 0 ? 1 : filters.PageNumber;
+
+
+            filters.PageNumber = filters.PageNumber == 0 ? _paginationOptions
+                .DefaultPageNumber : filters.PageNumber;
+            filters.PageSize = filters.PageSize == 0 ? _paginationOptions
+                .DefaultPageSize : filters.PageSize;
 
             var _post = _unitOfWork.PostRepository.GetAll();
 

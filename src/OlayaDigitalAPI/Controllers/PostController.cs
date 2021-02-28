@@ -6,6 +6,7 @@ using OlayaDigital.Core.DTOs;
 using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Core.QueryFilters;
+using OlayaDigital.Infrastructure.Interfaces;
 using OlayaDigital.Infrastructure.Repositories;
 using OlayaDigitalAPI.Responses;
 using System;
@@ -21,17 +22,19 @@ namespace OlayaDigitalAPI.Controllers
     {
         private readonly IPostService _postService;
         private readonly IMapper _mapper;
+        private readonly IUriService _uriService;
         //private readonly IRepository _postRepository;
 
         public PostController(IPostService postService,
-            IMapper mapper)
+            IMapper mapper, IUriService uriService)
         {
             _postService = postService;
             _mapper = mapper;
+            _uriService = uriService;
         }
 
 
-        [HttpGet]
+        [HttpGet(Name = nameof(GetPosts))]
         public async Task<IActionResult> GetPosts([FromQuery]PostQueryFilter filters)
         {
             #region "De Interés"
@@ -53,7 +56,6 @@ namespace OlayaDigitalAPI.Controllers
 
             //Mapeo con AutoMapper
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
-            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper);
 
             var metadata = new MetaData
             {
@@ -63,8 +65,16 @@ namespace OlayaDigitalAPI.Controllers
                 TotalPages = _post.TotalPages,
                 HasNexPage = _post.HasNextPage,
                 HasPreviousPage = _post.HasPreviousPage,
+                HasNexPageUrl = _uriService.GetPostPaginationUri(filters, 
+                    Url.RouteUrl(nameof(GetPosts))).ToString(),
+                TotalPreviousPageUrl = _uriService.GetPostPaginationUri(filters,
+                    Url.RouteUrl(nameof(GetPosts))).ToString()
             };
 
+            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper)
+            {
+                Meta = metadata
+            };
             Response.Headers.Add("x-Pagination", JsonConvert.SerializeObject(metadata));
             return Ok(_response);
         }
