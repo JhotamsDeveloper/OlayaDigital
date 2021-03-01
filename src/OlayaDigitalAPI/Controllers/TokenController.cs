@@ -64,8 +64,8 @@ namespace OlayaDigitalAPI.Controllers
                 _configuration["Authentication:Issuer"],
                 _configuration["Authentication:Audience"],
                 claims,
-                DateTime.Now,
-                DateTime.UtcNow.AddMinutes(10)
+                DateTime.Now, //Esta Fecha indica cuando empieza a funcionar el token
+                DateTime.UtcNow.AddMinutes(10) //Esta Fecha indica cuanto dura el token
             );
 
 
@@ -73,6 +73,12 @@ namespace OlayaDigitalAPI.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
 
+            /*Forma de utilizar en token desde PostMan
+             Creamos el token y lo utilizamos en el parametro bearer token
+
+            otra forma es ponerlo en el header de postman en key escribiendo authorization
+            y en valor ponemos Bearer [token]
+             */
         }
     }
 }
