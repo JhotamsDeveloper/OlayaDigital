@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using OlayaDigital.Core.CustomEntities;
@@ -7,15 +8,13 @@ using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Core.QueryFilters;
 using OlayaDigital.Infrastructure.Interfaces;
-using OlayaDigital.Infrastructure.Repositories;
 using OlayaDigitalAPI.Responses;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace OlayaDigitalAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PostController : ControllerBase

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using OlayaDigital.Core.CustomEntities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Core.Service;
@@ -18,6 +20,7 @@ using OlayaDigital.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace OlayaDigitalAPI
@@ -36,9 +39,7 @@ namespace OlayaDigitalAPI
         {
             services.AddControllers();
             services.AddDbContext<db_OlayaDigitalContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("db_OlayaDigital")));
-
-
+                options.UseSqlServer(Configuration.GetConnectionString("db_OlayaDigital")));
 
             //Configurando el servicio de automapper desde cualquier parte de la solucion (dominio)
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -53,6 +54,29 @@ namespace OlayaDigitalAPI
                 options.SerializerSettings.NullValueHandling =
                 Newtonsoft.Json.NullValueHandling.Ignore;
             });
+
+            //Configurando autenticación de JWT
+            //https://jwt.io/introduction
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["Authentication:Issuer"],
+                    ValidAudience = Configuration["Authentication:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Authentication:SecretKey"]))
+                };
+
+            });
+
+            services.AddMvc();
 
             //Añadir la configuración para llamar el número de paginas determinados
             //en el appsetting.json con la clase PaginationOptions.cs del proyecto
@@ -90,6 +114,8 @@ namespace OlayaDigitalAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

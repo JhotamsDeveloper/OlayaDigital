@@ -271,10 +271,11 @@ D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.csprojAssemblyReference.cache
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\staticwebassets\OlayaDigitalAPI.StaticWebAssets.Manifest.cache
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\staticwebassets\OlayaDigitalAPI.StaticWebAssets.xml
-D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.AssemblyInfoInputs.cache
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.AssemblyInfo.cs
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.RazorTargetAssemblyInfo.cache
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.csproj.CopyComplete
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.dll
 D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.pdb
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\VISUAL STUDIO\OlayaDigital\JhotamsDeveloper\OlayaDigital\src\OlayaDigitalAPI\obj\Debug\netcoreapp3.1\OlayaDigitalAPI.MvcApplicationPartsAssemblyInfo.cache
