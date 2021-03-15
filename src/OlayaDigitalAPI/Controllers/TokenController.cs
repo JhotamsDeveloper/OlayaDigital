@@ -9,26 +9,34 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using OlayaDigital.Core.CustomEntities;
 using OlayaDigital.Core.Entities;
+using OlayaDigital.Core.Service;
 
 namespace OlayaDigitalAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    
+
     public class TokenController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public TokenController(IConfiguration configuration)
+        private readonly IUserSecurityService _userSecurityService;
+        public TokenController(IConfiguration configuration, IUserSecurityService userSecurityService)
         {
             _configuration = configuration;
+            _userSecurityService = userSecurityService;
         }
         [HttpPost]
-        public IActionResult Authentication(UserLogin login)
+        public async Task<IActionResult> Authentication(UserLogin login)
         {
             //Válidar Usuario
-            if (IsvalidUser(login))
+            var validation = await IsvalidUser(login);
+            if (validation.Item1)
             {
-                var token = GenerateToken();
+                var token = GenerateToken(validation.Item2);
                 return Ok(new { token });
             };
 
@@ -36,13 +44,13 @@ namespace OlayaDigitalAPI.Controllers
         }
 
         //Válidar Usuarios desde la base de datos
-        private bool IsvalidUser (UserLogin login)
+        private async Task<(bool, User)> IsvalidUser (UserLogin login)
         {
-            //......
-            return true;
+            var _user = await _userSecurityService.GetLoginByCredentials(login);
+            return (_user != null, _user);
         }
 
-        private string GenerateToken()
+        private string GenerateToken(User _user)
         {
 
             //header
@@ -53,9 +61,11 @@ namespace OlayaDigitalAPI.Controllers
             //Claims
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, "Jhonatan Alejandro Muñoz Serna"),
-                new Claim(ClaimTypes.Email, "JhotaMS@Outlook.com"),
-                new Claim(ClaimTypes.Role, "Adminstrator")
+                new Claim(ClaimTypes.Name, _user.Name),
+                new Claim(ClaimTypes.Email, _user.Email),
+                new Claim(ClaimTypes.MobilePhone, _user.Phone),
+                new Claim(ClaimTypes.Role, _user.Role.ToString()),
+
             };
 
             //Playload

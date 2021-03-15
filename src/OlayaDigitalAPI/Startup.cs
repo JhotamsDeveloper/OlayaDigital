@@ -85,6 +85,7 @@ namespace OlayaDigitalAPI
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IPostService, PostService>();
+            services.AddTransient<IUserSecurityService, UserSecurityService>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddHttpContextAccessor();

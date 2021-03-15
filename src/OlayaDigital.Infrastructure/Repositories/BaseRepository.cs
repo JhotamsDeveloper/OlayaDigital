@@ -13,7 +13,7 @@ namespace OlayaDigital.Infrastructure.Repositories
     public class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly db_OlayaDigitalContext _contex;
-        private readonly DbSet<T> _entities;
+        protected readonly DbSet<T> _entities;
 
         public BaseRepository(db_OlayaDigitalContext contex)
         {
@@ -47,11 +47,6 @@ namespace OlayaDigital.Infrastructure.Repositories
             T entity = await GetById(id);
             _entities.Remove(entity);
         }
-
-
-
-
-
 
     }
 }

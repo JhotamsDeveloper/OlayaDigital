@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Enumeration\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 

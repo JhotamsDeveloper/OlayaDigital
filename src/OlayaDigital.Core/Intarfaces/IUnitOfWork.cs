@@ -14,6 +14,7 @@ namespace OlayaDigital.Core.Intarfaces
         IRepository<Comment> CommentRepository { get; }
         IRepository<Category> CategoryRepository { get; }
         IRepository<Audit> AuditRepository { get; }
+        IUserRepository UserSecurityRepository { get; }
 
         void saveChanges();
         Task saveChangesAsync();

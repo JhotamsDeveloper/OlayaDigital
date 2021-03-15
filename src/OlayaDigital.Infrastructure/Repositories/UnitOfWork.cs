@@ -15,6 +15,7 @@ namespace OlayaDigital.Infrastructure.Repositories
         private readonly IRepository<Comment> _commentRepository;
         private readonly IRepository<Category> _categoryRepository;
         private readonly IRepository<Audit> _audiRepository;
+        private readonly IUserRepository _userSecurityRepository;
 
         public UnitOfWork(db_OlayaDigitalContext contex)
         {
@@ -38,6 +39,9 @@ namespace OlayaDigital.Infrastructure.Repositories
 
         public IRepository<Audit> AuditRepository =>
             _audiRepository ?? new BaseRepository<Audit>(_contex);
+
+        public IUserRepository UserSecurityRepository =>
+            _userSecurityRepository ?? new UserRepository(_contex);
 
         public void Dispose()
         {
