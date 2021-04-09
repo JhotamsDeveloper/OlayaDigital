@@ -52,7 +52,9 @@ namespace OlayaDigitalAPI.Controllers
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
 
             //Estructurar el response del api
-            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper);
+            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper) {
+                Msg = "Resultado de la busqueda"
+            };
             return Ok(_response);
         }
 

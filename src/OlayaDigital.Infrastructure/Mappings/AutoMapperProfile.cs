@@ -13,6 +13,8 @@ namespace OlayaDigital.Infrastructure.Mappings
         {
             CreateMap<Post, PostDto>();
             CreateMap<PostDto, Post>();
+            CreateMap<Category, CategoryDto>();
+            CreateMap<CategoryDto, Category>();
         }
     }
 }

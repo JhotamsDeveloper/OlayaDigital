@@ -7,6 +7,7 @@ namespace OlayaDigitalAPI.Response
 {
     public class ApiResponse<T>
     {
+        public string Msg { get; set; }
         public ApiResponse(T data)
         {
             Data = data;
