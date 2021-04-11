@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlayaDigital.Unitests", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlayaDigital.IntegrationTests", "src\OlayaDigital.IntegrationTests\OlayaDigital.IntegrationTests.csproj", "{6FC03EF9-9C5D-4CCF-94C5-DC4DD4620D38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebOlayaDigital", "src\WebOlayaDigital\WebOlayaDigital.csproj", "{A0265577-E5FE-403B-A555-FF7F9DB72421}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{6FC03EF9-9C5D-4CCF-94C5-DC4DD4620D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC03EF9-9C5D-4CCF-94C5-DC4DD4620D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC03EF9-9C5D-4CCF-94C5-DC4DD4620D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0265577-E5FE-403B-A555-FF7F9DB72421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0265577-E5FE-403B-A555-FF7F9DB72421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0265577-E5FE-403B-A555-FF7F9DB72421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0265577-E5FE-403B-A555-FF7F9DB72421}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{DBDF1384-3363-4A4F-BD6F-7962A58301B3} = {2F13AB0E-FDFA-4F6C-8189-420874095763}
 		{A88848AA-0083-4B7A-AB4B-BD59053C699F} = {C3EDFB4D-776A-419D-B949-148453408418}
 		{6FC03EF9-9C5D-4CCF-94C5-DC4DD4620D38} = {C3EDFB4D-776A-419D-B949-148453408418}
+		{A0265577-E5FE-403B-A555-FF7F9DB72421} = {5A2E57E2-4C0D-489D-AF29-6096A97AB78B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08FEE9FF-A56D-4C1C-9591-630C22C3DD7B}
