@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using NewsAPI;
 using NewsAPI.Constants;
 using NewsAPI.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace OlayaDigitalAPI.Controllers
 {
@@ -32,7 +30,7 @@ namespace OlayaDigitalAPI.Controllers
                 Country = Countries.CO,
                 Language = Languages.ES,
                 Category = Categories.Science,
-                PageSize = 5,
+                PageSize = 12,
             });
 
             var articlesResult = await articlesResponseAsync;

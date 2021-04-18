@@ -12,6 +12,8 @@ using WebOlayaDigital.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebOlayaDigital.Interfaces;
+using WebOlayaDigital.Services;
 
 namespace WebOlayaDigital
 {
@@ -32,6 +34,10 @@ namespace WebOlayaDigital
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddTransient<INewsServices, NewsServices>();
+
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

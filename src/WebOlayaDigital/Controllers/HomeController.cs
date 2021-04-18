@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using WebOlayaDigital.Interfaces;
 using WebOlayaDigital.Models;
 
 namespace WebOlayaDigital.Controllers
@@ -12,15 +13,20 @@ namespace WebOlayaDigital.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly INewsServices _newServices;
+        public HomeController(ILogger<HomeController> logger,
+            INewsServices newServices)
         {
             _logger = logger;
+            _newServices = newServices;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            HomeModel model = new HomeModel();
+            model.Article = await _newServices.TopNewsNational();
+            return View(model);
         }
 
         public IActionResult Privacy()
