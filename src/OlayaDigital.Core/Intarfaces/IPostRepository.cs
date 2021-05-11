@@ -8,6 +8,6 @@ namespace OlayaDigital.Core.Intarfaces
      esta también hereda los métodos CRUD*/
     public interface IPostRepository : IRepository<Post>
     {
-        Task<IEnumerable<Post>> GetPostByUser(int userId);
+        IEnumerable<Post> GetPostWithAudiMedia();
     }
 }

@@ -29,11 +29,17 @@ namespace OlayaDigital.Infrastructure.Repositories
             return _entities.AsEnumerable();
         }
 
+        public IEnumerable<T> GetAllWithInclude()
+        {
+            return _entities.AsEnumerable();
+        }
+
         public async Task<T> GetById(int id)
         {
             var _model = await _entities.FindAsync(id);
             return _model;
         }
+
 
         public async Task Add(T entity)
         {

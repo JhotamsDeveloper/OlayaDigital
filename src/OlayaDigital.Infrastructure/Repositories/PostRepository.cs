@@ -16,11 +16,11 @@ namespace OlayaDigital.Infrastructure.Repositories
     {
         public PostRepository(db_OlayaDigitalContext _contex) : base(_contex) { }
 
-        public async Task<IEnumerable<Post>> GetPostByUser(int userId)
+        public IEnumerable<Post> GetPostWithAudiMedia()
         {
             //_entity es igual a _contex.post
-            return await _entities.Where(x => 
-            x.IdUser == userId).ToListAsync();
+            return _entities.Include(y => y.Medias)
+                .ToList();
         }
     }
 }

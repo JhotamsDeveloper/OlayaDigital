@@ -3,6 +3,7 @@ using OlayaDigital.Core.Exceptions;
 using OlayaDigital.Core.Intarfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,6 @@ namespace OlayaDigital.Core.Service
     {
 
         private readonly IUnitOfWork _unitOfWork;
-
         public PostService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -38,6 +38,11 @@ namespace OlayaDigital.Core.Service
 
             var _post = _unitOfWork.PostRepository.GetAll();
             return _post;
+        }
+
+        public IEnumerable<Post> GetPostWithAudiMedia()
+        {
+            return _unitOfWork.PostRepository.GetPostWithAudiMedia();
         }
 
         public async Task<Post> GetById(int id)

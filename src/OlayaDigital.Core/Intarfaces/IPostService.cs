@@ -13,6 +13,6 @@ namespace OlayaDigital.Core.Intarfaces
         Task InsertPost(Post post);
         Task<bool> UpdatePost(Post post);
         Task<bool> DeletePost(int id);
-
+        IEnumerable<Post> GetPostWithAudiMedia();
     }
 }

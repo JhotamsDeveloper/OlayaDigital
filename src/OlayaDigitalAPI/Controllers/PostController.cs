@@ -28,31 +28,47 @@ namespace OlayaDigitalAPI.Controllers
         }
 
 
+        //[HttpGet]
+        //public async Task<IActionResult> GetPosts()
+        //{
+        //    #region "De Interés"
+        //    //Forma de traer una clase sin hacer una inyección de dependencia
+        //    //var _posts = new PostRepository().GetPosts();
+
+        //    //Mapeo Manuel
+        //    //var _postDto = _post.Select(x => new PostDto
+        //    //{
+        //    //    Tittle = x.Tittle,
+        //    //    Description = x.Description,
+        //    //    Url = x.Url,
+        //    //    IdCategory = x.IdCategory,
+        //    //    IdUser = x.IdUser
+        //    //});
+        //    #endregion
+
+        //    var _post = _postService.GetPosts();
+
+        //    //Mapeo con AutoMapper
+        //    var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
+
+        //    //Estructurar el response del api
+        //    var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper) {
+        //        Msg = "Resultado de la busqueda"
+        //    };
+        //    return Ok(_response);
+        //}
+
         [HttpGet]
-        public async Task<IActionResult> GetPosts()
+        public async Task<IActionResult> GetPostWithAudiMedia()
         {
-            #region "De Interés"
-            //Forma de traer una clase sin hacer una inyección de dependencia
-            //var _posts = new PostRepository().GetPosts();
-
-            //Mapeo Manuel
-            //var _postDto = _post.Select(x => new PostDto
-            //{
-            //    Tittle = x.Tittle,
-            //    Description = x.Description,
-            //    Url = x.Url,
-            //    IdCategory = x.IdCategory,
-            //    IdUser = x.IdUser
-            //});
-            #endregion
-
-            var _post = _postService.GetPosts();
+            var _post = _postService.GetPostWithAudiMedia();
 
             //Mapeo con AutoMapper
             var _postMapper = _mapper.Map<IEnumerable<PostDto>>(_post);
 
             //Estructurar el response del api
-            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper) {
+            var _response = new ApiResponse<IEnumerable<PostDto>>(_postMapper)
+            {
                 Msg = "Resultado de la busqueda"
             };
             return Ok(_response);
