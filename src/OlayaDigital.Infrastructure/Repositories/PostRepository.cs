@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OlayaDigital.Core.DTOs;
 using OlayaDigital.Core.Entities;
 using OlayaDigital.Core.Intarfaces;
 using OlayaDigital.Infrastructure.Data;
@@ -18,9 +19,7 @@ namespace OlayaDigital.Infrastructure.Repositories
 
         public IEnumerable<Post> GetPostWithAudiMedia()
         {
-            //_entity es igual a _contex.post
-            return _entities.Include(y => y.Medias)
-                .ToList();
+            return _entities.Include(y => y.Medias).ToList();
         }
     }
 }
