@@ -14,5 +14,6 @@ namespace OlayaDigital.Core.DTOs
         public int? IdUser { get; set; }
         public ICollection<CommentDto> Comments { get; set; }
         public ICollection<AuditDto> AuditDto { get; set; }
+        public ICollection<MediaDto> MediaDto { get; set; }
     }
 }

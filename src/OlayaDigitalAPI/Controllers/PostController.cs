@@ -98,6 +98,20 @@ namespace OlayaDigitalAPI.Controllers
                         auditList.Add(auditDto);
                     }
                     _getPostWithTableRelation.AuditDto = auditList;
+
+                    List<MediaDto> mediaDtosList = new List<MediaDto>();
+                    foreach (var item1 in item.Medias)
+                    {
+                        MediaDto media = new MediaDto();
+                        media.FileName = item1.FileName;
+                        media.IdPost = item1.IdPost;
+                        media.Extension = item1.Extension;
+                        media.FileSize = item1.FileSize;
+                        media.Route = item1.Route;
+                        media.Cover = item1.Cover;
+                        mediaDtosList.Add(media);
+                    }
+                    _getPostWithTableRelation.MediaDto = mediaDtosList;
                     _getPostWithTableRelationList.Add(_getPostWithTableRelation);
                 }
             }
