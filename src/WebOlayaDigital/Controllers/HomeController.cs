@@ -14,11 +14,13 @@ namespace WebOlayaDigital.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly INewsServices _newServices;
+        private readonly IPostService _postService;
         public HomeController(ILogger<HomeController> logger,
-            INewsServices newServices)
+            INewsServices newServices, IPostService postService)
         {
             _logger = logger;
             _newServices = newServices;
+            _postService = postService;
         }
 
         [HttpGet]
@@ -26,6 +28,7 @@ namespace WebOlayaDigital.Controllers
         {
             HomeModel model = new HomeModel();
             model.Article = await _newServices.TopNewsNational();
+            model.Post = await _postService.TopPost();
             return View(model);
         }
 

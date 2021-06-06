@@ -13,7 +13,8 @@ namespace WebOlayaDigital.Models
         public string Description { get; set; }
         public int? IdCategory { get; set; }
         public int? IdUser { get; set; }
-        public ICollection<CommentDto> Comments { get; set; }
+        public ICollection<CommentDto> comments { get; set; }
         public ICollection<AuditDto> AuditDto { get; set; }
+        public ICollection<MediaDto> MediaDto { get; set; }
     }
 }

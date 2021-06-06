@@ -20,7 +20,7 @@ namespace WebOlayaDigital.Services
         {
             _configuration = configuration;
         }
-        public async Task<IEnumerable<GetPostWithTableRelation>> TopPost()
+        public async Task<ResponsePOST> TopPost()
         {
             Uri _getPostAPI = new Uri($"{_configuration.GetValue<string>(getPostAPI)}");
             var _httpClient = new HttpClient();
@@ -29,8 +29,7 @@ namespace WebOlayaDigital.Services
             GetPostWithTableRelation getPostWithTableRelation =
                 new GetPostWithTableRelation();
 
-            IEnumerable<GetPostWithTableRelation> _post = JsonConvert
-                .DeserializeObject<IEnumerable<GetPostWithTableRelation>>(_json);
+            ResponsePOST _post = JsonConvert.DeserializeObject<ResponsePOST>(_json);
 
             return _post;
         }

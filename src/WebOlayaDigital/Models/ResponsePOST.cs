@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace WebOlayaDigital.Models
 {
-    public class HomeModel
+    public class ResponsePOST
     {
-        public IEnumerable<Article> Article { get; set; }
-        public ResponsePOST Post { get; set; }
+        public string Msg { get; set; }
+        public ICollection<GetPostWithTableRelation> Data { get; set; }
     }
 }

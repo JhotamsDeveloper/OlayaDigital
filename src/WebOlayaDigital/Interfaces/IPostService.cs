@@ -6,6 +6,6 @@ namespace WebOlayaDigital.Interfaces
 {
     public interface IPostService
     {
-        Task<IEnumerable<GetPostWithTableRelation>> TopPost();
+        Task<ResponsePOST> TopPost();
     }
 }
