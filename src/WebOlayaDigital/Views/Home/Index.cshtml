@@ -73,8 +73,8 @@
                                 </h4>
                                 <div class="card-body">
                                     <p class="card-description">
-                                       Brinda atención en la casa de la cultura Sucre y Olaya
-                                   
+                                        Brinda atención en la casa de la cultura Sucre y Olaya
+
                                     </p>
                                 </div>
                                 <div class="card-footer justify-content-center">
@@ -98,7 +98,7 @@
                                 </h4>
                                 <div class="card-body">
                                     <p class="card-description">
-                                       Brinda atención en la biblioteca del corregimiento de Llanadas.
+                                        Brinda atención en la biblioteca del corregimiento de Llanadas.
                                     </p>
                                 </div>
                                 <div class="card-footer justify-content-center">
@@ -143,21 +143,57 @@
                 </div>
             </div>
             <div class="row">
-                @foreach (var item in Model.Article)
-	            {
-                <div class="col-md-3">
+                @foreach (var item in Model.Post.Data)
+                {
+                    <div class="col-md-3 mt-4">
 
-                    <div class="card">
-                        <img class="card-img-top" src="@item.UrlToImage"  target="_blank" alt="@item.Title">
-                        <div class="card-body">
-                            <h6>@item.Title</h6>
-                            <p class="card-text">@item.Description</p>
-                            <a href="@item.Url" target="_blank" class="btn btn-primary">Ver</a>
+                        <div class="card h-100">
+                            @if (item.MediaDto.Count > 0)
+                            {
+                                <img class="card-img-top" src="@item.MediaDto.Where(x => x.Cover == true).FirstOrDefault().NameFile" target="_blank" alt="@item.Tittle">
+                            }
+                            else
+                            {
+                                <img class="card-img-top" src="~/img/post/wallpaper.jpeg" target="_blank" alt="@item.Tittle">
+                            }
+                            <div class="card-body">
+                                <h6>@item.Tittle</h6>
+                                <p class="card-text">@item.Description</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="@item.Url" target="_blank" class="btn btn-primary">Ver</a>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="section section-contacts">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <h2 class="text-center title">Otras noticias</h2>
                 </div>
-	            }
+            </div>
+            <div class="row">
+                @foreach (var item in Model.Article)
+                {
+                    <div class="col-md-3 mt-4">
+
+                        <div class="card h-100">
+                            <img class="card-img-top" src="@item.UrlToImage" target="_blank" alt="@item.Title">
+                            <div class="card-body">
+                                <h6>@item.Title</h6>
+                                <p class="card-text">@item.Description</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="@item.Url" target="_blank" class="btn btn-primary">Ver</a>
+                            </div>
+                        </div>
+
+                    </div>
+                }
             </div>
         </div>
     </div>

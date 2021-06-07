@@ -21,7 +21,7 @@ namespace OlayaDigital.Infrastructure.Repositories
         {
             return _entities.Include(y => y.Medias)
                 .Include(x => x.Audits).Include(a => a.Coments)
-                .ToList();
+                .Take(8).ToList();
         }
     }
 }

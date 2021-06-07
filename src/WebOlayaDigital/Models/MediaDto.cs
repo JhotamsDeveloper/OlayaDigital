@@ -12,6 +12,6 @@ namespace WebOlayaDigital.Models
         public string Extension { get; set; }
         public float Weight { get; set; }
         public string Route { get; set; }
-        public bool MyProperty { get; set; }
+        public bool Cover { get; set; }
     }
 }
