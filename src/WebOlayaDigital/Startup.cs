@@ -69,6 +69,14 @@ namespace WebOlayaDigital
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //Administrador
+                endpoints.MapControllerRoute(
+                name: "Administrador",
+                pattern: "Administrador",
+                defaults: new { Controller = "Admin", action = "Index" });
+
+
                 endpoints.MapRazorPages();
             });
         }

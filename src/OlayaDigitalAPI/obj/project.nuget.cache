@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zmrREFL4rXNcjmL+fkT3QQfMl+V1xmlMb0+LKiTlVl3Vy39rVcDlHwqvswI+VGaihuewnW1oa1fwgcmyOjBkKQ==",
+  "dgSpecHash": "wKlRZD4Jkx+hHoqoMNi89PrKgQCnxFrjON0r2NGbsaKz+kpZ2nW4T5y4cx9PB699fHUMYzTXmxHrWhMN5/s70Q==",
   "success": true,
   "projectFilePath": "D:\\VISUAL STUDIO\\OlayaDigital\\src\\OlayaDigitalAPI\\OlayaDigitalAPI.csproj",
   "expectedPackageFiles": [
@@ -45,6 +45,7 @@
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.11\\microsoft.entityframeworkcore.design.3.1.11.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.11\\microsoft.entityframeworkcore.relational.3.1.11.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.11\\microsoft.entityframeworkcore.sqlserver.3.1.11.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.11\\microsoft.entityframeworkcore.tools.3.1.11.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.11\\microsoft.extensions.caching.abstractions.3.1.11.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.11\\microsoft.extensions.caching.memory.3.1.11.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.11\\microsoft.extensions.configuration.3.1.11.nupkg.sha512",
@@ -69,17 +70,18 @@
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\3.1.4\\microsoft.visualstudio.web.codegeneration.3.1.4.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\3.1.4\\microsoft.visualstudio.web.codegeneration.contracts.3.1.4.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\3.1.4\\microsoft.visualstudio.web.codegeneration.core.3.1.4.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\3.1.4\\microsoft.visualstudio.web.codegeneration.design.3.1.4.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.entityframeworkcore\\3.1.4\\microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.4.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\3.1.4\\microsoft.visualstudio.web.codegeneration.templating.3.1.4.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\3.1.4\\microsoft.visualstudio.web.codegeneration.utils.3.1.4.nupkg.sha512",
-    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\3.1.4\\microsoft.visualstudio.web.codegenerators.mvc.3.1.4.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\3.1.5\\microsoft.visualstudio.web.codegeneration.3.1.5.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\3.1.5\\microsoft.visualstudio.web.codegeneration.contracts.3.1.5.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\3.1.5\\microsoft.visualstudio.web.codegeneration.core.3.1.5.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\3.1.5\\microsoft.visualstudio.web.codegeneration.design.3.1.5.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.entityframeworkcore\\3.1.5\\microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.5.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\3.1.5\\microsoft.visualstudio.web.codegeneration.templating.3.1.5.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\3.1.5\\microsoft.visualstudio.web.codegeneration.utils.3.1.5.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\3.1.5\\microsoft.visualstudio.web.codegenerators.mvc.3.1.5.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\CEO Personal\\.nuget\\packages\\newsapi\\0.6.0\\newsapi.0.6.0.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
@@ -191,5 +193,16 @@
     "C:\\Users\\CEO Personal\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\CEO Personal\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"NewsAPI 0.6.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "NewsAPI",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

@@ -1,28 +1,57 @@
 ﻿@{
+    string imagen = Url.Content($"~/img/bg3.jpg");
     if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
     {
         Layout = (string)parentLayout;
     }
     else
     {
+        //Layout = "~/Views/Shared/_Layout.cshtml";
         Layout = "/Areas/Identity/Pages/_Layout.cshtml";
     }
 }
 
-<h2>Manage your account</h2>
-
-<div>
-    <h4>Change your account settings</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-3">
-            <partial name="_ManageNav" />
-        </div>
-        <div class="col-md-9">
-            @RenderBody()
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('@imagen')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="title">BIENVENIDOS</h1>
+                <h4>
+                    Las casas de la cultura del municipio de Olaya promueve la lectura, escritura, información, y las diferentes manifestaciones artistico-culturales,convirtiendonos en una institución dinámica y fortaleciondo la integración cultural.
+                    Este es un lugar donde respetamos los derechos fundamentales y el sentir artístico de cada uno, respaldndo iniciativas qe tengan como fin lograr la identidad cultural del municipio.
+                </h4>
+                <br>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
+                    <i class="fa fa-play"></i> Watch video
+                </a>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="main main-raised">
+    <div class="container">
+        <div class="section text-center">
+
+            <h2>Manage your account</h2>
+
+            <div>
+                <h4>Change your account settings</h4>
+                <hr />
+                <div class="row">
+                    <div class="col-md-3">
+                        <partial name="_ManageNav" />
+                    </div>
+                    <div class="col-md-9">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 @section Scripts {
     @RenderSection("Scripts", required: false)
